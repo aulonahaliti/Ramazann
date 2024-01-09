@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="lampp"><img src="images/lamp.png" class="laamp" alt=""></div>
+    <h1>Vaktia e ramazanit</h1>
+    <table id="ramazanTable">
+        <thead>
+        <tr>
+            <th>Data</th>
+            <th>Muaji</th>
+            <th>Dita</th>
+            <th>Syfyri</th>
+            <th>Lindja e Diellit</th>
+            <th>Dreka</th>
+            <th>Ikindia</th>
+            <th>Akshami</th>
+            <th>Jacia</th>
+            <th>Gjatesia e dites </th>
+            <th>Shenime</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </table>
+
+    <script>
+        const jsonData = {
+            "vaktiaa": [
+                {
+                    "Data": 24,
+                    "Muaji": "Prill",
+                    "Dita": "E hene",
+                    "Syfyri": "3:50",
+                    "Lindja_e_Diellit": "5:33",
+                    "Dreka": "12:36",
+                    "Ikindia": "16:25",
+                    "Akshami": "19:35",
+                    "Jacia": "21:17",
+                    "Gjatesia_e_dites": "14:02",
+                    "Shenime": "Dita e parë e Ramazanit, e xhuma, Hëna e re",
+                },
+                {
+                    "Data": 25,
+                    "Muaji": "Prill",
+                    "Dita": "E marte",
+                    "Syfyri": "3:47",
+                    "Lindja_e_Diellit": "5:31",
+                    "Dreka": "12:36",
+                    "Ikindia": "16:25",
+                    "Akshami": "19:36",
+                    "Jacia": "21:18",
+                    "Gjatesia_e_dites": "14:05",
+                    "Shenime": "",
+                }, 
+                {
+                    "Data":26,
+                    "Muaji": "Prill",
+                    "Dita": "E merkure",
+                    "Syfyri": "3:45",
+                    "Lindja_e_Diellit": "5:30",
+                    "Dreka": "12:36",
+                    "Ikindia": "16:26",
+                    "Akshami": "19:37",
+                    "Jacia": "21:20",
+                    "Gjatesia_e_dites": "14:07",
+                    "Shenime": "",
+                },
+                {
+            "Data": 27,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:43",
+            "Lindja_e_Diellit": "5:29",
+            "Dreka": "12:36",
+            "Ikindia": "16:26",
+            "Akshami": "19:38",
+            "Jacia": "21:22",
+            "Gjatesia_e_dites": "14:09",
+            "Shenime": ""
+        },
+        {
+            "Data": 28,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:41",
+            "Lindja_e_Diellit": "5:28",
+            "Dreka": "12:36",
+            "Ikindia": "16:27",
+            "Akshami": "19:40",
+            "Jacia": "21:24",
+            "Gjatesia_e_dites": "14:12",
+            "Shenime": ""
+        },
+        {
+            "Data": 29,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:45",
+            "Lindja_e_Diellit": "5:30",
+            "Dreka": "12:36",
+            "Ikindia": "16:26",
+            "Akshami": "19:37",
+            "Jacia": "21:20",
+            "Gjatesia_e_dites": "14:07",
+            "Shenime": ""
+        },
+        {
+            "Data": 30,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:37",
+            "Lindja_e_Diellit": "5:26",
+            "Dreka": "12:36",
+            "Ikindia": "16:29",
+            "Akshami": "19:42",
+            "Jacia": "21:27",
+            "Gjatesia_e_dites": "14:16",
+            "Shenime": ""
+        },
+        {
+            "Data": 1,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:35",
+            "Lindja_e_Diellit": "5:25",
+            "Dreka": "12:36",
+            "Ikindia": "16:29",
+            "Akshami": "19:43",
+            "Jacia": "21:18",
+            "Gjatesia_e_dites": "14:18",
+            "Shenime": "E xhuma"
+        },
+        {
+            "Data": 2,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:33",
+            "Lindja_e_Diellit": "5:24",
+            "Dreka": "12:36",
+            "Ikindia": "16:30",
+            "Akshami": "19:44",
+            "Jacia": "21:30",
+            "Gjatesia_e_dites": "14:20",
+            "Shenime": ""
+        },  
+        {
+            "Data": 3,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:31",
+            "Lindja_e_Diellit": "5:22",
+            "Dreka": "12:36",
+            "Ikindia": "16:30",
+            "Akshami": "19:45",
+            "Jacia": "21:31",
+            "Gjatesia_e_dites": "14:23",
+            "Shenime": ""
+        },
+        {
+            "Data": 4,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:29",
+            "Lindja_e_Diellit": "5:20",
+            "Dreka": "12:35",
+            "Ikindia": "16:30",
+            "Akshami": "19:46",
+            "Jacia": "21:32",
+            "Gjatesia_e_dites": "14:26",
+            "Shenime": ""
+        },
+        {
+            "Data": 5,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:27",
+            "Lindja_e_Diellit": "5:18",
+            "Dreka": "12:35",
+            "Ikindia": "16:30",
+            "Akshami": "19:46",
+            "Jacia": "21:32",
+            "Gjatesia_e_dites": "14:26",
+            "Shenime": ""
+        },
+        {
+            "Data": 6,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:25",
+            "Lindja_e_Diellit": "5:17",
+            "Dreka": "12:35",
+            "Ikindia": "16:31",
+            "Akshami": "19:48",
+            "Jacia": "21:35",
+            "Gjatesia_e_dites": "14:31",
+            "Shenime": ""
+        },
+        {
+            "Data": 7,
+            "Muaji": "Prill",
+            "Dita": "E merkure",
+            "Syfyri": "3:23",
+            "Lindja_e_Diellit": "5:15",
+            "Dreka": "12:35",
+            "Ikindia": "16:31",
+            "Akshami": "19:49",
+            "Jacia": "21:36",
+            "Gjatesia_e_dites": "14:34",
+            "Shenime": "Hëna e plotë"
+        }
+            ]
+        };
+
+        const tableBody = document.querySelector("#ramazanTable tbody");
+
+        for (let i = 0; i< jsonData.vaktiaa.length; i++){
+
+            const ramazann = jsonData.vaktiaa[i];
+
+            const row = tableBody.insertRow();
+
+            row.insertCell(0).innerHTML = ramazann.Data;
+            row.insertCell(1).innerHTML = ramazann.Muaji;
+            row.insertCell(2).innerHTML = ramazann.Dita;
+            row.insertCell(3).innerHTML = ramazann.Syfyri;
+            row.insertCell(4).innerHTML = ramazann.Lindja_e_Diellit;
+            row.insertCell(5).innerHTML = ramazann.Dreka;
+            row.insertCell(6).innerHTML = ramazann.Ikindia;
+            row.insertCell(7).innerHTML = ramazann.Akshami;
+            row.insertCell(8).innerHTML = ramazann.Jacia;
+            row.insertCell(9).innerHTML = ramazann.Gjatesia_e_dites;
+            row.insertCell(10).innerHTML = ramazann.Shenime;
+        }
+
+
+
+    </script>
+
+</body>
+</html>
